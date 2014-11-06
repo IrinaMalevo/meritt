@@ -5,14 +5,131 @@
 @titulo: @corpo;
 @corpo: 'Arial', sans-serif;;
 
-@width: 1000px;
+@width: 990px;
 @raio: 10px;
 
 // MIXINS ESPECÍFICOS
-
+.gradiente-verde{
+	#gradient .vertical(@verde-claro-2, @verde-claro);
+}
 
 // LAYOUT
+#pagina-container{
+	margin: 20px auto;
+	width: @width;
+}
 
+#topo{
+	.box-sizing(border-box);
+	background: @background;
+	height: 80px;
+	padding: 17px;
+
+	a{
+		color: @branco;
+	}
+
+	.logo{
+		background: url(../images/logo.png) no-repeat left center;
+		display: block;
+		float: left;
+		font-weight: bold;
+		font-size: 36px;
+		height: 45px;
+		line-height: 45px;
+		padding-left: 55px;
+	}
+	nav{
+		float: right;
+		margin-top: 17px;
+
+		li{
+			display: inline;
+			padding: 0 20px;
+		}
+		li+li{
+			border-left: 1px solid @branco;
+		}
+		a{
+			font-size: 18px;
+			text-decoration: underline;
+		}
+	}
+}
+#busca{
+	float: left;
+	margin-left: 25px;
+
+	input{
+		.redondo;
+		background: @branco;
+		border: 1px solid @preto;
+		font-size: 12px;
+		font-weight: bold;
+		height: 45px;
+		padding-left: 25px;
+		width: 310px;
+	}
+	/* o texto "busca" e o botão para envio estão ocultos */
+	label{
+		.hide-text;
+
+		&::before{
+
+		}
+	}
+	button{
+		display: none;
+	}
+}
+
+#conteudo{
+
+	.cor-arranjos{
+		color: @azul;
+	}
+	.cor-desenvolvimento{
+		color: @rosa;
+	}
+	.cor-educacao{
+		color: @cinza;
+	}
+	.ade{
+		font-weight: bold;
+		font-size: 36px;
+		letter-spacing: -6px;
+		text-align: center;
+
+		&::before, &::after{
+			border-top: 1px dashed @cinza-claro-2;
+			content: '';
+			display: inline-block;
+			margin: 0 10px;
+			vertical-align: middle;
+			width: 435px;
+			height: 0px;
+		}
+	}
+}
+#apresentacao{
+	margin: 40px auto;
+	width: 755px;
+
+	h1{
+		font-size: 36px;
+		margin-bottom: 40px;
+		text-align: center;
+
+		span{
+			font-weight: bold;
+		}
+	}
+	.resumo{
+		color: @highlight;
+		font-size: 22px;
+		text-align: justify;
+	}
+}
 
 // IMPORT RESPONSIVE 320p - smartphone
 
