@@ -1,0 +1,493 @@
+@charset 'utf-8';
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+#map_canvas img {
+  max-width: none;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  padding: 0;
+  -webkit-appearance: button;
+}
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+/* ELEMENTOS */
+body {
+  color: #333333;
+  min-width: 990px;
+  text-rendering: optimizelegibility;
+}
+body,
+input,
+textarea,
+select,
+button {
+  font: normal 14px 'Arial', sans-serif;
+}
+a {
+  color: #ff9900;
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  color: #ffa31a;
+}
+b,
+strong {
+  font-weight: bold;
+}
+i,
+em {
+  font-style: italic;
+}
+button {
+  border: 0;
+  cursor: pointer;
+  display: block;
+  float: right;
+}
+abbr {
+  border-bottom: 1px dotted #000000;
+  cursor: help;
+}
+::selection {
+  background: #0099cc;
+  color: #000000;
+}
+::moz-selection {
+  background: #0099cc;
+  color: #000000;
+}
+.container {
+  margin: 0;
+  min-width: 990px;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+}
+.content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 30px;
+  position: relative;
+  width: 990px;
+}
+.animar {
+  -webkit-transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.sombra-box {
+  -webkit-box-shadow: -2px 2px 9px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -2px 2px 9px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: -2px 2px 9px 0px rgba(0, 0, 0, 0.5);
+}
+.sombra-texto {
+  text-shadow: 2px 2px 3px #000000;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+/* ROLAGEM PERSONALIZADA */
+/*
+::-webkit-scrollbar {
+	width: 15px;
+}
+::-webkit-scrollbar-track {
+	.box-sizing(content-box);
+	background: @fundoRolagem;
+	padding: 3px;
+}
+::-webkit-scrollbar-thumb {
+	background: @barraRolagem;
+	.box-shadow( inset 0 0 6px fade(@preto, .5) );
+	.redondo(15px);
+	border: 4px solid @fundoRolagem;
+}
+
+.ao-topo{
+	//.redondo(30px);
+	background: @botaoTopo url(../images/to-top-branco.png) no-repeat center;
+	display: none;
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
+	width: 45px;
+	height: 45px;
+	z-index: 1000;
+
+	&:before{
+		.anima;
+		//.redondo(10px);
+		background: @botaoTopo;
+		color: @branco;
+		content: 'Voltar ao topo';
+		display: block;
+		font-size: 10px;
+		line-height: 20px;
+		overflow: hidden;
+		position: absolute;
+		top: 12px;
+		right: 45px;
+		text-transform: uppercase;
+		text-align: right;
+		white-space: nowrap;
+		width: 0;
+	}
+	&:hover{
+		&:before{
+			//top: 10px;
+			padding: 0 3px;
+			width: 90px;
+		}
+	}
+}
+*/
+.gradiente-verde {
+  background-color: #04a21c;
+  background-image: -moz-linear-gradient(top, #009a04, #0aad3f);
+  background-image: -ms-linear-gradient(top, #009a04, #0aad3f);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#009a04), to(#0aad3f));
+  background-image: -webkit-linear-gradient(top, #009a04, #0aad3f);
+  background-image: -o-linear-gradient(top, #009a04, #0aad3f);
+  background-image: linear-gradient(top, #009a04, #0aad3f);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009a04', endColorstr='#0aad3f', GradientType=0);
+}
+#pagina-container {
+  margin: 20px auto;
+  width: 990px;
+}
+#topo {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #009999;
+  height: 80px;
+  padding: 17px;
+}
+#topo a {
+  color: #ffffff;
+}
+#topo .logo {
+  background: url(../images/logo.png) no-repeat left center;
+  display: block;
+  float: left;
+  font-weight: bold;
+  font-size: 36px;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 55px;
+}
+#topo nav {
+  float: right;
+  margin-top: 17px;
+}
+#topo nav li {
+  display: inline;
+  padding: 0 20px;
+}
+#topo nav li + li {
+  border-left: 1px solid #ffffff;
+}
+#topo nav a {
+  font-size: 18px;
+  text-decoration: underline;
+}
+#busca {
+  float: left;
+  margin-left: 25px;
+  /* o texto "busca" e o botão para envio estão ocultos */
+}
+#busca input {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  font-size: 12px;
+  font-weight: bold;
+  height: 45px;
+  padding-left: 25px;
+  width: 310px;
+}
+#busca label {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+#busca button {
+  display: none;
+}
+#conteudo .cor-arranjos {
+  color: #0099cc;
+}
+#conteudo .cor-desenvolvimento {
+  color: #993366;
+}
+#conteudo .cor-educacao {
+  color: #666666;
+}
+#conteudo .ade {
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: -6px;
+  text-align: center;
+}
+#conteudo .ade::before,
+#conteudo .ade::after {
+  border-top: 1px dashed #cccccc;
+  content: '';
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+  width: 435px;
+  height: 0px;
+}
+#apresentacao {
+  margin: 40px auto;
+  width: 755px;
+}
+#apresentacao h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+#apresentacao h1 span {
+  font-weight: bold;
+}
+#apresentacao .resumo {
+  color: #666666;
+  font-size: 22px;
+  text-align: justify;
+}
