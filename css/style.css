@@ -239,12 +239,12 @@ button {
   font: normal 14px 'Arial', sans-serif;
 }
 a {
-  color: #ff9900;
+  color: #ff6600;
   text-decoration: none;
 }
 a:hover,
 a:active {
-  color: #ffa31a;
+  color: #ff751a;
 }
 b,
 strong {
@@ -462,6 +462,7 @@ abbr {
   font-weight: bold;
   font-size: 36px;
   letter-spacing: -6px;
+  margin-bottom: 50px;
   text-align: center;
 }
 #conteudo .ade::before,
@@ -474,9 +475,52 @@ abbr {
   width: 435px;
   height: 0px;
 }
+#conteudo .botao {
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  background-color: #04a21c;
+  background-image: -moz-linear-gradient(top, #009a04, #0aad3f);
+  background-image: -ms-linear-gradient(top, #009a04, #0aad3f);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#009a04), to(#0aad3f));
+  background-image: -webkit-linear-gradient(top, #009a04, #0aad3f);
+  background-image: -o-linear-gradient(top, #009a04, #0aad3f);
+  background-image: linear-gradient(top, #009a04, #0aad3f);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009a04', endColorstr='#0aad3f', GradientType=0);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  line-height: 40px;
+  text-align: center;
+}
+#conteudo header {
+  margin: 0 auto 50px;
+  text-align: center;
+  width: 470px;
+}
+#conteudo h2 {
+  font-size: 36px;
+}
+#conteudo h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#conteudo .texto {
+  font-size: 14px;
+  line-height: 1.2em;
+}
+#conteudo .texto p + p {
+  margin-top: 15px;
+}
 #apresentacao {
-  margin: 40px auto;
-  width: 755px;
+  margin: 40px auto !important;
+  width: 755px !important;
 }
 #apresentacao h1 {
   font-size: 36px;
@@ -490,4 +534,93 @@ abbr {
   color: #666666;
   font-size: 22px;
   text-align: justify;
+}
+#features-container {
+  *zoom: 1;
+  margin-bottom: 80px;
+}
+#features-container:before,
+#features-container:after {
+  display: table;
+  content: "";
+}
+#features-container:after {
+  clear: both;
+}
+#features-container section {
+  width: 460px;
+}
+#features-container #caracteristicas {
+  float: left;
+}
+#features-container #beneficios {
+  float: right;
+}
+.lista-descricao {
+  font-size: 11px;
+  margin: 45px 0;
+}
+.lista-descricao .titulo {
+  font-size: 18px;
+}
+.lista-descricao li {
+  padding-left: 45px;
+}
+.lista-descricao li + li {
+  margin-top: 25px;
+}
+.lista-descricao a::before {
+  content: '> ';
+}
+#fundamentos {
+  *zoom: 1;
+}
+#fundamentos:before,
+#fundamentos:after {
+  display: table;
+  content: "";
+}
+#fundamentos:after {
+  clear: both;
+}
+#fundamentos .chamada {
+  color: #666666;
+  font-weight: bold;
+  font-size: 12px;
+}
+#fundamentos #livro {
+  float: left;
+  width: 175px;
+}
+#fundamentos #livro .descricao {
+  font-size: 12px;
+  font-style: italic;
+  margin: 30px 0 25px;
+}
+#fundamentos #livro .botao {
+  margin-top: 45px;
+  width: 100%;
+}
+#fundamentos section {
+  float: left;
+  margin-left: 85px;
+  width: 710px;
+}
+.lista-fundamentos {
+  margin: 30px auto 60px;
+}
+.lista-fundamentos li {
+  float: left;
+  font-size: 12px;
+  padding-left: 30px;
+  width: 195px;
+}
+.lista-fundamentos li + li {
+  margin-left: 15px;
+}
+.lista-fundamentos p + p {
+  margin: 0 !important;
+}
+.lista-fundamentos .titulo {
+  font-weight: bold;
 }
