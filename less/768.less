@@ -1,0 +1,91 @@
+// VERSÃO RESPONSIVA PARA TELAS ATÉ 768px
+
+// Largura portrait do iPad 4
+#busca{
+	input{
+		width: 240px;
+	}
+}
+
+#conteudo{
+	width: 100%;
+
+	header{
+		.box-sizing(border-box);
+		width: 100%;
+	}
+}
+#apresentacao{
+	width: 80% !important;
+}
+
+#conteudo{
+	.ade{
+		&::before, &::after{
+			display: block;
+			margin: 10px auto;
+			width: 90%;
+		}
+	}
+}
+
+#fundamentos{
+	margin-bottom: 50px;
+
+	#livro, .coluna-texto{
+		float: none;
+		margin: auto;
+	}
+	#livro{
+		overflow: auto;
+		width: 450px;
+
+		img{
+			float: left;
+			margin-right: 50px;
+		}
+		.botao{
+			overflow: auto;
+			width: 200px;
+		}
+	}
+}
+
+#homologacao{
+	margin: 0 40px;
+}
+#resolucao{
+	margin-left: 50px;
+}
+
+#features-container{
+	section, h2{
+		display: none;
+	}
+	section{
+		float: none !important;
+		margin: 20px auto;
+		width: 85%;
+	}
+}
+#menu-features{
+	display: block;
+
+	a{
+		#gradient .vertical(@cinza-claro, @cinza);
+		.box-sizing(border-box);
+		border: 1px solid @borda;
+		color: @branco;
+		display: inline-block;
+		font-size: 30px;
+		line-height: 40px;
+		text-align: center; 
+		width: 48%;
+
+		&.active{
+			#gradient .vertical(darken(@branco, 20), @branco);
+			border-bottom: 0;
+			color: @texto;
+		}
+	}
+}
