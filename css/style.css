@@ -374,7 +374,6 @@ abbr {
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-/* LESS CUSTOMIZADO PARA O PROJETO DA MERITT */
 @font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/fontawesome-webfont.eot?v=4.2.0');
@@ -418,9 +417,10 @@ abbr {
   float: left;
   font-weight: bold;
   font-size: 36px;
-  height: 45px;
   line-height: 45px;
   padding-left: 55px;
+  width: 115px;
+  height: 45px;
 }
 #topo nav {
   float: right;
@@ -446,6 +446,10 @@ abbr {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
   background: #ffffff;
   border: 1px solid #000000;
   font-size: 12px;
@@ -646,8 +650,8 @@ abbr {
   margin-top: 45px;
   width: 100%;
 }
-#fundamentos section {
-  float: left;
+#fundamentos .coluna-texto {
+  float: right;
   margin-left: 85px;
   width: 710px;
 }
@@ -722,4 +726,141 @@ abbr {
 #implantar .botao {
   margin: 30px auto;
   width: 340px;
+}
+#menu-features {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  body {
+    background: yellow;
+    min-width: 0;
+    width: auto;
+  }
+  #pagina-container {
+    margin: 0;
+    width: 100%;
+  }
+  #conteudo {
+    margin: auto;
+    width: 990px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  #busca input {
+    width: 240px;
+  }
+  #conteudo {
+    width: 100%;
+  }
+  #conteudo header {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  #apresentacao {
+    width: 80% !important;
+  }
+  #conteudo .ade::before,
+  #conteudo .ade::after {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+  }
+  #fundamentos {
+    margin-bottom: 50px;
+  }
+  #fundamentos #livro,
+  #fundamentos .coluna-texto {
+    float: none;
+    margin: auto;
+  }
+  #fundamentos #livro {
+    overflow: auto;
+    width: 450px;
+  }
+  #fundamentos #livro img {
+    float: left;
+    margin-right: 50px;
+  }
+  #fundamentos #livro .botao {
+    overflow: auto;
+    width: 200px;
+  }
+  #homologacao {
+    margin: 0 40px;
+  }
+  #resolucao {
+    margin-left: 50px;
+  }
+  #features-container section,
+  #features-container h2 {
+    display: none;
+  }
+  #features-container section {
+    float: none !important;
+    margin: 20px auto;
+    width: 85%;
+  }
+  #menu-features {
+    display: block;
+  }
+  #menu-features a {
+    background-color: #858585;
+    background-image: -moz-linear-gradient(top, #999999, #666666);
+    background-image: -ms-linear-gradient(top, #999999, #666666);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#999999), to(#666666));
+    background-image: -webkit-linear-gradient(top, #999999, #666666);
+    background-image: -o-linear-gradient(top, #999999, #666666);
+    background-image: linear-gradient(top, #999999, #666666);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#999999', endColorstr='#666666', GradientType=0);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #999999;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    width: 48%;
+  }
+  #menu-features a.active {
+    background-color: #e0e0e0;
+    background-image: -moz-linear-gradient(top, #cccccc, #ffffff);
+    background-image: -ms-linear-gradient(top, #cccccc, #ffffff);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cccccc), to(#ffffff));
+    background-image: -webkit-linear-gradient(top, #cccccc, #ffffff);
+    background-image: -o-linear-gradient(top, #cccccc, #ffffff);
+    background-image: linear-gradient(top, #cccccc, #ffffff);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#ffffff', GradientType=0);
+    border-bottom: 0;
+    color: #333333;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  #topo {
+    height: auto;
+  }
+  #topo .logo,
+  #topo nav,
+  #topo #busca {
+    float: none;
+  }
+  #topo .logo {
+    margin: auto;
+  }
+  #topo #busca {
+    margin: 10px 0;
+  }
+  #topo #busca input {
+    width: 100%;
+  }
+  #topo nav {
+    text-align: center;
+  }
 }
