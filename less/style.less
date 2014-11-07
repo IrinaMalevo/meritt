@@ -35,10 +35,11 @@
 		display: block;
 		float: left;
 		font-weight: bold;
-		font-size: 36px;
-		height: 45px;
+		font-size: 36px;		
 		line-height: 45px;
 		padding-left: 55px;
+		width: 115px;
+		height: 45px;
 	}
 	nav{
 		float: right;
@@ -64,6 +65,7 @@
 
 	input{
 		.redondo;
+		.box-sizing(border-box);
 		background: @branco;
 		border: 1px solid @preto;
 		font-size: 12px;
@@ -269,8 +271,8 @@
 			width: 100%;
 		}
 	}
-	section{
-		float: left;
+	.coluna-texto{
+		float: right;
 		margin-left: 85px;
 		width: 710px;
 	}
@@ -367,8 +369,19 @@
 	}
 }
 
-// IMPORT RESPONSIVE 320p - smartphone
+// IMPORT RESPONSIVE - iPad Portrait
+@media only screen and (max-width: 1024px) {
+	@import "1024.less";
+}
 
 // IMPORT RESPONSIVE - iPad Landscape
+@media only screen and (max-width: 768px) {
+	@import "768.less";
+}
 
-// IMPORT RESPONSIVE - iPad Portrait
+// IMPORT RESPONSIVE 480p - smartphone
+@media only screen and (max-width: 480px) {
+	@import "480.less";
+}
+
+
