@@ -41,6 +41,8 @@
 }
 #menu-features{
 	display: block;
+	margin: auto;
+	width: 94%;
 
 	a{
 		#gradient .vertical(@cinza-claro, @cinza);
@@ -51,7 +53,7 @@
 		font-size: 30px;
 		line-height: 40px;
 		text-align: center; 
-		width: 48%;
+		width: 49%;
 
 		&.active{
 			#gradient .vertical(darken(@branco, 20), @branco);
@@ -85,7 +87,15 @@
 
 #homologacao{
 	margin: 0 40px;
+	
+	.coluna-texto{
+		width: 350px;
+	}
+
+	.lista-resolucao a{
+		display: block;
+	}
 }
 #resolucao{
-	margin-left: 50px;
+	width: 330px;
 }
