@@ -689,11 +689,13 @@ abbr {
   color: #006600;
   content: "\f058";
 }
-#homologacao .apresentacao p {
+#homologacao .apresentacao {
   font-size: 18px;
+  margin-bottom: 30px;
 }
-#homologacao section {
-  margin-top: 30px;
+#homologacao .coluna-texto {
+  float: left;
+  width: 630px;
 }
 #resolucao {
   float: right;
@@ -732,7 +734,6 @@ abbr {
 }
 @media only screen and (max-width: 1024px) {
   body {
-    background: yellow;
     min-width: 0;
     width: auto;
   }
@@ -767,32 +768,6 @@ abbr {
     display: block;
     margin: 10px auto;
     width: 90%;
-  }
-  #fundamentos {
-    margin-bottom: 50px;
-  }
-  #fundamentos #livro,
-  #fundamentos .coluna-texto {
-    float: none;
-    margin: auto;
-  }
-  #fundamentos #livro {
-    overflow: auto;
-    width: 450px;
-  }
-  #fundamentos #livro img {
-    float: left;
-    margin-right: 50px;
-  }
-  #fundamentos #livro .botao {
-    overflow: auto;
-    width: 200px;
-  }
-  #homologacao {
-    margin: 0 40px;
-  }
-  #resolucao {
-    margin-left: 50px;
   }
   #features-container section,
   #features-container h2 {
@@ -841,8 +816,39 @@ abbr {
     border-bottom: 0;
     color: #333333;
   }
+  #fundamentos {
+    margin-bottom: 50px;
+  }
+  #fundamentos #livro,
+  #fundamentos .coluna-texto {
+    float: none;
+    margin: auto;
+  }
+  #fundamentos #livro {
+    overflow: auto;
+    width: 450px;
+  }
+  #fundamentos #livro img {
+    float: left;
+    margin-right: 50px;
+  }
+  #fundamentos #livro .botao {
+    overflow: auto;
+    width: 200px;
+  }
+  #homologacao {
+    margin: 0 40px;
+  }
+  #resolucao {
+    margin-left: 50px;
+  }
 }
+/*
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+	@import "480.less";
+}
+*/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   #topo {
     height: auto;
   }
@@ -862,5 +868,113 @@ abbr {
   }
   #topo nav {
     text-align: center;
+  }
+  #topo nav li {
+    padding: 0 18px;
+  }
+  #conteudo {
+    width: 100%;
+  }
+  #conteudo .ade {
+    font-size: 30px;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+  #conteudo header {
+    margin: 15px auto;
+    width: 94%;
+  }
+  #conteudo h2 {
+    font-size: 28px;
+  }
+  #apresentacao {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: 100% !important;
+  }
+  #apresentacao .resumo {
+    font-size: 16px;
+  }
+  #features-container section {
+    float: none !important;
+    margin: 5px auto;
+    width: 94%;
+  }
+  #features-container section h2 {
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    line-height: 40px;
+  }
+  #features-container section h2::after {
+    font-family: 'FontAwesome';
+    content: "\f055";
+    float: right;
+    font-size: 20px;
+  }
+  #features-container section h2.active {
+    border-bottom: 0;
+  }
+  #features-container section h2.active::after {
+    content: "\f056";
+  }
+  #features-container .lista-descricao {
+    display: none;
+    margin: 20px 0;
+  }
+  #features-container .lista-descricao li::before {
+    font-size: 24px;
+  }
+  #fundamentos .coluna-texto {
+    float: none;
+    margin: auto;
+    width: 94%;
+  }
+  #fundamentos .lista-fundamentos {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    width: 100%;
+  }
+  #fundamentos .lista-fundamentos li {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    white-space: normal;
+  }
+  #fundamentos #livro {
+    float: none;
+    margin: 0 auto 30px;
+    width: 215px;
+  }
+  #homologacao .coluna-texto {
+    float: none;
+    margin: 0 auto;
+    width: 94%;
+  }
+  #homologacao .lista-resolucao a {
+    display: block;
+  }
+  #homologacao .titulo {
+    font-size: 16px;
+  }
+  #resolucao {
+    float: none;
+    margin: auto;
+    min-width: 245px;
+    width: 75%;
+  }
+  #resolucao .botao {
+    margin: 20px auto;
+  }
+  #implantar {
+    margin: 20px auto 0;
+    width: 94%;
+  }
+  #implantar .resumo {
+    font-size: 18px;
   }
 }
