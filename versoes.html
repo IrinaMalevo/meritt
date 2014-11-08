@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Diferentes resoluções - QData</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Desafio técnico para vaga de Front-end UI. Meritt Educacional." />
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- <link href="favicon.png" rel="shortcut icon" type="image/png" /> -->
+
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="versoes">
+	
+	<ul id="menu">
+		<li><a href="index.html">Versão principal</a></li>
+		<li data-resolucao="#v320" onclick="abreResolucao(this)">Tela iPhone 6</li>
+		<li data-resolucao="#v768" onclick="abreResolucao(this)">Tela iPad 4 Retrato</li>
+		<li data-resolucao="#v1024" onclick="abreResolucao(this)">Tela iPad 4 Paisagem</li>
+	</ul>
+
+	<div id="v320" class="painel">
+		<h1>Tela 375 x 667 pixels (iPhone 6)</h1>
+		<iframe src="index.html" sandbox="allow-same-origin allow-forms allow-scripts" width="375" height="667"></iframe>
+	</div>
+	<div id="v768" class="painel">
+		<h1>Tela 768 x 1024 pixels (iPad 4 Retrato)</h1>
+		<iframe src="index.html" sandbox="allow-same-origin allow-forms allow-scripts" width="788" height="1024"></iframe>
+	</div>
+	<div id="v1024" class="painel">
+		<h1>Tela 1024 x 768 pixels (iPad 4 Paisagem)</h1>
+		<iframe src="index.html" sandbox="allow-same-origin allow-forms allow-scripts" width="1024" height="768"></iframe>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+		function abreResolucao(e){
+			var obj = $(e);
+
+			$('#menu .active').removeClass();
+			$('.painel').fadeOut();
+
+			obj.addClass('active');
+			$(obj.data('resolucao')).fadeIn();
+		}
+	</script>
+
+</body>
+</html>
