@@ -395,6 +395,9 @@ abbr {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009a04', endColorstr='#0aad3f', GradientType=0);
 }
+body {
+  background: #ffffff;
+}
 #pagina-container {
   margin: 20px auto;
   width: 990px;
@@ -780,6 +783,8 @@ abbr {
   }
   #menu-features {
     display: block;
+    margin: auto;
+    width: 94%;
   }
   #menu-features a {
     background-color: #858585;
@@ -801,7 +806,7 @@ abbr {
     font-size: 30px;
     line-height: 40px;
     text-align: center;
-    width: 48%;
+    width: 49%;
   }
   #menu-features a.active {
     background-color: #e0e0e0;
@@ -839,8 +844,14 @@ abbr {
   #homologacao {
     margin: 0 40px;
   }
+  #homologacao .coluna-texto {
+    width: 350px;
+  }
+  #homologacao .lista-resolucao a {
+    display: block;
+  }
   #resolucao {
-    margin-left: 50px;
+    width: 330px;
   }
 }
 /*
@@ -873,6 +884,7 @@ abbr {
     padding: 0 18px;
   }
   #conteudo {
+    overflow: hidden;
     width: 100%;
   }
   #conteudo .ade {
@@ -977,4 +989,63 @@ abbr {
   #implantar .resumo {
     font-size: 18px;
   }
+  #implantar .botao {
+    max-width: 90%;
+  }
+}
+/* STYLE PARA VISUALIZAR VERSÕES */
+#versoes {
+  background: url(../images/subtle_white_mini_waves.png) repeat;
+}
+#versoes #menu {
+  -webkit-border-radius: 0 10px 10px 0;
+  -moz-border-radius: 0 10px 10px 0;
+  border-radius: 0 10px 10px 0;
+  background: rgba(102, 102, 102, 0.7);
+  border: 1px solid #999999;
+  padding: 10px 15px 10px 5px;
+  position: fixed;
+  top: 30px;
+  left: 0;
+}
+#versoes #menu li + li {
+  margin-top: 7px;
+}
+#versoes #menu li,
+#versoes #menu a {
+  color: #ffffff;
+  cursor: pointer;
+}
+#versoes #menu li:hover,
+#versoes #menu a:hover {
+  text-decoration: underline;
+}
+#versoes #menu li.active,
+#versoes #menu a.active {
+  font-weight: bold;
+}
+#versoes .painel {
+  display: none;
+  margin: auto;
+  padding: 20px 0;
+  position: relative;
+}
+#versoes .painel h1 {
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  text-shadow: 1px 1px 0 #999999;
+  background: rgba(153, 153, 153, 0.4);
+  font-weight: bold;
+  line-height: 1.5em;
+  text-align: center;
+}
+#versoes #v320 {
+  width: 375px;
+}
+#versoes #v768 {
+  width: 788px;
+}
+#versoes #v1024 {
+  width: 1024px;
 }
