@@ -512,6 +512,7 @@ body{
 		.box-sizing(border-box);
 		border-left: 1px solid @borda-tabela;
 		padding: 0 18px;
+		position: relative;
 		text-align: center;
 		vertical-align: middle;
 	}
@@ -537,5 +538,29 @@ body{
 	.escolas{
 		display: block;
 		font-size: 12px;
+	}
+}
+#filtro-container{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+
+	&::before{
+		.fa;
+		color: @borda;
+		content: @fa-var-search;
+		font-size: 18px;
+		position: absolute;
+		top: 9px;
+		left: 11px;
+	}
+
+	input{
+		.redondo(6px);
+		border: 1px solid @borda;
+		font-size: 12px;
+		padding: 8px 8px 8px 35px;
+		width: 115px;
+		height: 20px;
 	}
 }
