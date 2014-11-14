@@ -7,8 +7,8 @@
 	@fundo: #eaecec;
 	@cor: @basecolor;
 
-	//border-radius: 50%;
 	.border-radius(50%);
+	.transition(all 300ms cubic-bezier(0.19, 1, 0.22, 1));
 	background: @fundo;
 	display: block;
 	position: relative;
@@ -17,16 +17,29 @@
 
 	&::before{
 		.border-radius(50%);
+		//.transition(all 500ms cubic-bezier(0.19, 1, 0.22, 1));
 		background: #fff;
 		color: @cor;
 		content: attr(data-progresso)+'%';
 		display: block;
-		line-height: @tamanho - @espaco*2;
 		position: absolute;
 		top: @espaco;
 		left: @espaco;
 		width: @tamanho - @espaco*2;
+		line-height: @tamanho - @espaco*2;
 		z-index: 10;
+	}
+	
+	/*
+	&:hover::before{
+		top: @espaco * 1.5;
+		left: @espaco * 1.5;
+		width: @tamanho - @espaco*3;
+		line-height: @tamanho - @espaco*3;
+	}
+	*/
+	&:hover{
+		//.scale(1.1);
 	}
 
 	// mixim para aplicar cores

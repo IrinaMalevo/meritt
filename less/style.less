@@ -499,6 +499,7 @@ body{
 	width: 100%;
 
 	td{
+		.anima;
 		border-top: 1px solid @borda-celula;
 		height: 100px;
 	}
@@ -507,6 +508,10 @@ body{
 	}
 	tr{
 		border-left: 5px solid @borda-tabela;
+
+		&:hover td{
+			background: darken(@branco, 3);
+		}
 	}
 	th, td{
 		.box-sizing(border-box);
