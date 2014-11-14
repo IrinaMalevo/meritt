@@ -1,1 +1,91 @@
-/**/
+@import (reference) 'colors';
+@import (reference) 'mixins';
+
+.progresso{
+	@tamanho: 70px;
+	@espaco: 10px;
+	@fundo: #eaecec;
+	@cor: @basecolor;
+
+	//border-radius: 50%;
+	.border-radius(50%);
+	background: @fundo;
+	display: block;
+	position: relative;
+	width: @tamanho;
+	height: @tamanho;
+
+	&::before{
+		.border-radius(50%);
+		background: #fff;
+		color: @cor;
+		content: attr(data-progresso)+'%';
+		display: block;
+		line-height: @tamanho - @espaco*2;
+		position: absolute;
+		top: @espaco;
+		left: @espaco;
+		width: @tamanho - @espaco*2;
+		z-index: 10;
+	}
+
+	// mixim para aplicar cores
+	.cor(@cor){
+		.preenchimento{
+			background-color: @cor !important;
+		}
+		&::before{
+			color: @cor !important;
+		}
+	}
+
+	// define as cores específicas para cada critério
+	&.alerta{
+		.cor(@ideb-amarelo);
+	}
+	&.atencao{
+		.cor(@ideb-laranja);
+	}
+	&.melhorar{
+		.cor(@ideb-verde);
+	}
+	&.manter{
+		.cor(@ideb-azul);
+	}
+
+	.mascara, .preenchimento{
+		.border-radius(50%);
+		-webkit-backface-visibility: hidden;
+		position: absolute;
+		width: @tamanho;
+		height: @tamanho;
+	}
+	.mascara{
+		// a mascara gira juntamente com o preenchimento pra definir o ângulo correto
+		clip: rect(0, @tamanho, @tamanho, @tamanho/2);
+
+		.preenchimento{
+			// corta uma "meia lua" que é usada para fazer a barra
+			background-color: @cor;
+			clip: rect(0, @tamanho/2, @tamanho, 0);
+		}
+	}
+
+	// o laço cria classes para cada unidade da "porcentagem"
+	// o código fica BEM extenso, principalmente devido aos prefixos específicos de navegadores para a rotação
+	@i: 0;
+	@incremento: 180deg / 100;
+	.loop (@i) when (@i <= 100){
+		&[data-progresso="@{i}"]{
+			.mascara.inteira, .preenchimento{
+				.rotate(@incremento * @i);
+			}
+			.preenchimento.fix{
+				// esse elemento 'fix' corrige umas falhas que podem aparecer na barra, devido à renderização do browser e os "encaixes"
+				.rotate(@incremento * @i * 2);
+			}
+		}
+		.loop(@i + 1);
+	}
+	.loop(@i);
+}
