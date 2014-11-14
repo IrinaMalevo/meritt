@@ -11,6 +11,7 @@
 	<!-- <link href="favicon.png" rel="shortcut icon" type="image/png" /> -->
 
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/radial.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	
@@ -48,8 +49,11 @@
 				<table id="table-municipios">
 					<thead>
 						<tr>
-							<th rowspan="2" class="tit-municipios">Municípios de A a Z <input type="search" id="filtro"></th>
-							<th rowspan="2">Fluxo x Aprendizado = Ideb</th>
+							<th rowspan="2" class="tit-municipios">
+								Municípios de A a Z
+								<span id="filtro-container"><input type="search" id="filtro" placeholder="Buscar município"></span>
+							</th>
+							<th rowspan="2" data-dynatable-column="ideb">Fluxo x Aprendizado = Ideb</th>
 							<th colspan="4">Situação das escolas</th>
 						</tr>
 						<tr>
@@ -60,16 +64,57 @@
 						</tr>
 					</thead>
 					<tbody>
+						
 						<tr>
 							<td>
 								<span class="municipio">Nome do município</span>
 								<span class="escolas">10 escolas</span>
 							</td>
 							<td>0,98 x 5,67 = 5,50</td>
-							<td>11%</td>
-							<td>12%</td>
-							<td>54%</td>
-							<td>32%</td>
+							<td>
+								<div class="progresso alerta" data-progresso="11">
+									<div class="mascara inteira">
+										<div class="preenchimento"></div>
+									</div>
+									<div class="mascara metade">
+										<div class="preenchimento"></div>
+										<div class="preenchimento fix"></div>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div class="progresso atencao" data-progresso="12">
+									<div class="mascara inteira">
+										<div class="preenchimento"></div>
+									</div>
+									<div class="mascara metade">
+										<div class="preenchimento"></div>
+										<div class="preenchimento fix"></div>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div class="progresso melhorar" data-progresso="54">
+									<div class="mascara inteira">
+										<div class="preenchimento"></div>
+									</div>
+									<div class="mascara metade">
+										<div class="preenchimento"></div>
+										<div class="preenchimento fix"></div>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div class="progresso manter" data-progresso="32">
+									<div class="mascara inteira">
+										<div class="preenchimento"></div>
+									</div>
+									<div class="mascara metade">
+										<div class="preenchimento"></div>
+										<div class="preenchimento fix"></div>
+									</div>
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<td>
@@ -93,6 +138,8 @@
 							<td>54%</td>
 							<td>32%</td>
 						</tr>
+						
+
 					</tbody>
 				</table>
 			</section>
@@ -104,6 +151,61 @@
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/functions.js"></script>
 	<script src="js/mediaCheck-min.js"></script>
+
+	<script>
+	/*
+		$(document).ready(function(){
+			//var municipios = $.getJSON("json/municipios.json");
+
+			
+			var municipios = [
+				{
+					"nome": "serafina",
+					"escolas": 10,
+					"ideb": "0,98 x 5,67 = 5,50",
+					"alerta": 0.11,
+					"atencao": 0.12,
+					"melhorar": 0.54,
+					"manter": 0.32
+				},
+				{
+					"nome": "nome",
+					"escolas": 10,
+					"ideb": "0,98 x 5,67 = 5,50",
+					"alerta": 0.11,
+					"atencao": 0.12,
+					"melhorar": 0.54,
+					"manter": 0.32
+				}
+			];
+
+			$('#table-municipios').dynatable({
+				dataset: {
+					records: municipios
+				},
+				writers: {
+					_rowWriter: escreveLinha
+				}
+			});
+		});
+
+		function escreveLinha(rowIndex, record, columns, cellWriter){
+			var linha;
+			linha = '<tr>' +
+						'<td>' +
+							'<span class="municipio">' + record.nome + '</span>' +
+							'<span class="escolas">'+ record.escolas + ' escolas</span>' +
+						'</td>' +
+						'<td>0,98 x 5,67 = 5,50</td>' +
+						'<td>11%</td>' +
+						'<td>12%</td>' +
+						'<td>54%</td>' +
+						'<td>32%</td>' +
+					'</tr>';
+			return linha;
+		}
+		*/
+	</script>
 
 </body>
 </html>
