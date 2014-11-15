@@ -542,11 +542,12 @@ body{
 		position: fixed;
 		top: 30px;
 		left: 0;
+		z-index: 20;
 
 		li+li{
 			margin-top: 7px;
 		}
-		li, a{
+		a{
 			color: @branco;
 			cursor: pointer;
 
@@ -556,6 +557,14 @@ body{
 			&.active{
 				font-weight: bold;
 			}
+		}
+		li.titulo{
+			color: @branco;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		li+.titulo{
+			margin-top: 20px;
 		}
 	}
 	.painel{
@@ -572,17 +581,5 @@ body{
 			line-height: 1.5em;
 			text-align: center;
 		}
-	}
-	#v320{
-		width: 375px;
-		//height: 667px;
-	}
-	#v768{
-		width: 788px;
-		//height: 1024px;
-	}
-	#v1024{
-		width: 1024px;
-		//height: 768px;
 	}
 }
