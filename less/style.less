@@ -498,6 +498,17 @@ body{
 	margin-top: 35px;
 	width: 100%;
 
+	thead{
+		// faz com que o cabeçalho da tabela fique sempre visível na página
+		// não funciona em todos os navegadores desktop, mas funciona nos móveis
+		position: -webkit-sticky;
+		position: -moz-sticky;
+		position: -ms-sticky;
+		position: -o-sticky;
+		position: sticky;
+		top: 0;
+		z-index: 40;
+	}
 	td{
 		.anima;
 		border-top: 1px solid @borda-celula;
@@ -522,6 +533,7 @@ body{
 		vertical-align: middle;
 	}
 	th{
+		background: @branco;
 		border-bottom: 1px solid @borda-tabela;
 		font-weight: bold;
 		font-size: 12px;
