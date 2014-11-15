@@ -261,16 +261,16 @@ button {
   float: right;
 }
 abbr {
-  border-bottom: 1px dotted #000000;
+  border-bottom: 1px dotted #ffffff;
   cursor: help;
 }
 ::selection {
   background: #0099cc;
-  color: #000000;
+  color: #ffffff;
 }
 ::moz-selection {
   background: #0099cc;
-  color: #000000;
+  color: #ffffff;
 }
 .container {
   margin: 0;
@@ -1125,7 +1125,7 @@ body {
 }
 #table-municipios .tit-municipios {
   text-align: left;
-  width: 400px;
+  width: 350px;
 }
 #table-municipios .grafico {
   width: 85px;
