@@ -158,3 +158,89 @@
 		max-width: 90%;
 	}
 }
+
+/* ESTILO COMPLEMENTAR PARA O DESAFIO 2 */
+#ideb{
+	h1{
+		float: none;
+		text-align: center;
+	}
+	.ferramentas{
+		float: none;
+		margin-top: 20px;
+		overflow: auto;
+		width: 100%;
+
+		li{
+			width: 33%;
+		}
+		a{
+			width: auto;
+		}
+	}
+}
+#table-municipios{
+	.clearfix;
+	display: block;
+	width: 100%;
+
+	thead{
+		display: block;
+		float: left;
+
+		tr{
+			display: block;
+		}
+		th{
+			border-right: 2px solid @borda-tabela;
+			display: block;
+			padding-right: 6px;
+			text-align: right !important;
+			width: 80px !important;
+		}
+	}
+	tbody{
+		display: block;
+		width: auto;
+		position: relative;
+		overflow-x: auto;
+		overflow-y: hidden;
+		white-space: nowrap;
+
+		tr{
+			border-left-width: 1px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		td{
+			display: block;
+			text-align: left;
+		}
+	}
+	th, td{
+		border-top: 1px solid @borda-tabela;
+		border-bottom: 0;
+		height: 35px;
+		line-height: 35px;
+		padding: 0 4px;
+	}
+	th[colspan="4"]{
+		display: none;
+	}
+	.subtitulo, .escolas{
+		display: none;
+	}
+	.municipio{
+		font-weight: bold;
+		font-size: 14px;
+	}
+	td:nth-child(2){
+		font-size: 13px;
+	}
+	.progresso::before{
+		line-height: 35px;
+	}
+}
+#filtro-container{
+	display: none;
+}

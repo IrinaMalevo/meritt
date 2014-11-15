@@ -15,3 +15,49 @@ body{
 	margin: auto;
 	width: @width;
 }
+
+/* ESTILO COMPLEMENTAR PARA O DESAFIO 2 */
+#ideb{
+	>div{
+		margin: 20px 10px;
+	}
+}
+#table-municipios{
+	th, td{
+		width: auto !important;
+	}
+	.progresso{
+		display: inline;
+		width: auto;
+		height: auto;
+
+		&::before{
+			.redondo(0);
+			background: transparent;
+			position: relative;
+			top: auto;
+			left: auto;
+			width: auto;
+			line-height: 1.1em;
+		}
+	}
+	.mascara{
+		display: none;
+	}
+}
+#filtro-container{
+	position: relative !important;
+	top: auto !important;
+	right: auto !important;
+	margin-top: 10px;
+
+	&::before{
+		font-size: 15px;
+		top: 6px;
+		left: 7px;
+	}
+
+	input{
+		padding: 3px 3px 3px 25px;
+	}
+}
