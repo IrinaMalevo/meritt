@@ -65,7 +65,7 @@
 					</thead>
 					<tbody>
 						
-						<tr>
+						<!-- <tr>
 							<td>
 								<span class="municipio">Nome do município</span>
 								<span class="escolas">10 escolas</span>
@@ -115,7 +115,7 @@
 									</div>
 								</div>
 							</td>
-						</tr>
+						</tr> -->
 					</tbody>
 				</table>
 			</section>
@@ -126,61 +126,6 @@
 
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/tabela.js"></script>
-
-	<script>
-	/*
-		$(document).ready(function(){
-			//var municipios = $.getJSON("json/municipios.json");
-
-			
-			var municipios = [
-				{
-					"nome": "serafina",
-					"escolas": 10,
-					"ideb": "0,98 x 5,67 = 5,50",
-					"alerta": 0.11,
-					"atencao": 0.12,
-					"melhorar": 0.54,
-					"manter": 0.32
-				},
-				{
-					"nome": "nome",
-					"escolas": 10,
-					"ideb": "0,98 x 5,67 = 5,50",
-					"alerta": 0.11,
-					"atencao": 0.12,
-					"melhorar": 0.54,
-					"manter": 0.32
-				}
-			];
-
-			$('#table-municipios').dynatable({
-				dataset: {
-					records: municipios
-				},
-				writers: {
-					_rowWriter: escreveLinha
-				}
-			});
-		});
-
-		function escreveLinha(rowIndex, record, columns, cellWriter){
-			var linha;
-			linha = '<tr>' +
-						'<td>' +
-							'<span class="municipio">' + record.nome + '</span>' +
-							'<span class="escolas">'+ record.escolas + ' escolas</span>' +
-						'</td>' +
-						'<td>0,98 x 5,67 = 5,50</td>' +
-						'<td>11%</td>' +
-						'<td>12%</td>' +
-						'<td>54%</td>' +
-						'<td>32%</td>' +
-					'</tr>';
-			return linha;
-		}
-		*/
-	</script>
 
 </body>
 </html>
