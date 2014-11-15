@@ -735,6 +735,132 @@ body {
 #menu-features {
   display: none;
 }
+/* ESTILO COMPLEMENTAR PARA O DESAFIO 2 */
+#ideb {
+  padding: 35px 0;
+}
+#ideb h1 {
+  color: #666666;
+  float: left;
+  font-weight: bold;
+  font-size: 22px;
+}
+#ideb .ferramentas {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  float: right;
+}
+#ideb .ferramentas li {
+  float: left;
+}
+#ideb .ferramentas li + li {
+  border-left: 1px solid #000000;
+}
+#ideb .ferramentas a {
+  color: #000000;
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 26px;
+  text-align: center;
+  width: 104px;
+}
+#table-municipios {
+  border: 1px solid #dedede;
+  margin-top: 35px;
+  width: 100%;
+}
+#table-municipios thead {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+#table-municipios td {
+  -webkit-transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
+  border-top: 1px solid #f8f8f8;
+  height: 100px;
+}
+#table-municipios td:first-child {
+  text-align: left;
+}
+#table-municipios tr {
+  border-left: 5px solid #dedede;
+}
+#table-municipios tr:hover td {
+  background: #f7f7f7;
+}
+#table-municipios th,
+#table-municipios td {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border-left: 1px solid #dedede !important;
+  padding: 0 18px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+#table-municipios th {
+  border-bottom: 1px solid #dedede;
+  font-weight: bold;
+  font-size: 12px;
+  height: 35px;
+  min-width: 50px;
+}
+#table-municipios .tit-municipios {
+  text-align: left;
+  width: 350px;
+}
+#table-municipios .grafico {
+  width: 85px;
+}
+#table-municipios .municipio {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+#table-municipios .escolas {
+  display: block;
+  font-size: 12px;
+}
+#filtro-container {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+#filtro-container::before {
+  font-family: 'FontAwesome';
+  color: #999999;
+  content: "\f002";
+  font-size: 18px;
+  position: absolute;
+  top: 9px;
+  left: 11px;
+  z-index: 10;
+}
+#filtro-container input {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #999999;
+  font-size: 12px;
+  padding: 8px 8px 8px 35px;
+  width: 115px;
+  height: 20px;
+}
+/* RESPONSIVE */
 @media only screen and (max-width: 1024px) {
   body {
     min-width: 0;
@@ -747,6 +873,47 @@ body {
   #conteudo {
     margin: auto;
     width: 990px;
+  }
+  /* ESTILO COMPLEMENTAR PARA O DESAFIO 2 */
+  #ideb > div {
+    margin: 20px 10px;
+  }
+  #table-municipios th,
+  #table-municipios td {
+    width: auto !important;
+  }
+  #table-municipios .progresso {
+    display: inline;
+    width: auto;
+    height: auto;
+  }
+  #table-municipios .progresso::before {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background: transparent;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    line-height: 1.1em;
+  }
+  #table-municipios .mascara {
+    display: none;
+  }
+  #filtro-container {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    margin-top: 10px;
+  }
+  #filtro-container::before {
+    font-size: 15px;
+    top: 6px;
+    left: 7px;
+  }
+  #filtro-container input {
+    padding: 3px 3px 3px 25px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 990px) {
@@ -992,6 +1159,95 @@ body {
   #implantar .botao {
     max-width: 90%;
   }
+  /* ESTILO COMPLEMENTAR PARA O DESAFIO 2 */
+  #ideb h1 {
+    float: none;
+    text-align: center;
+  }
+  #ideb .ferramentas {
+    float: none;
+    margin-top: 20px;
+    overflow: auto;
+    width: 100%;
+  }
+  #ideb .ferramentas li {
+    width: 33%;
+  }
+  #ideb .ferramentas a {
+    width: auto;
+  }
+  #table-municipios {
+    *zoom: 1;
+    display: block;
+    width: 100%;
+  }
+  #table-municipios:before,
+  #table-municipios:after {
+    display: table;
+    content: "";
+  }
+  #table-municipios:after {
+    clear: both;
+  }
+  #table-municipios thead {
+    display: block;
+    float: left;
+  }
+  #table-municipios thead tr {
+    display: block;
+  }
+  #table-municipios thead th {
+    border-right: 2px solid #dedede;
+    display: block;
+    padding-right: 6px;
+    text-align: right !important;
+    width: 80px !important;
+  }
+  #table-municipios tbody {
+    display: block;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  #table-municipios tbody tr {
+    border-left-width: 1px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  #table-municipios tbody td {
+    display: block;
+    text-align: left;
+  }
+  #table-municipios th,
+  #table-municipios td {
+    border-top: 1px solid #dedede;
+    border-bottom: 0;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 4px;
+  }
+  #table-municipios th[colspan="4"] {
+    display: none;
+  }
+  #table-municipios .subtitulo,
+  #table-municipios .escolas {
+    display: none;
+  }
+  #table-municipios .municipio {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  #table-municipios td:nth-child(2) {
+    font-size: 13px;
+  }
+  #table-municipios .progresso::before {
+    line-height: 35px;
+  }
+  #filtro-container {
+    display: none;
+  }
 }
 /* STYLE PARA VISUALIZAR VERSÕES */
 #versoes {
@@ -1048,118 +1304,4 @@ body {
 }
 #versoes #v1024 {
   width: 1024px;
-}
-/* ESTILO COMPLEMENTAR PARA O DESAFIO 2 */
-#ideb {
-  padding: 35px 0;
-}
-#ideb h1 {
-  color: #666666;
-  float: left;
-  font-weight: bold;
-  font-size: 22px;
-}
-#ideb .ferramentas {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: 1px solid #000000;
-  float: right;
-}
-#ideb .ferramentas li {
-  float: left;
-}
-#ideb .ferramentas li + li {
-  border-left: 1px solid #000000;
-}
-#ideb .ferramentas a {
-  color: #000000;
-  display: block;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 26px;
-  text-align: center;
-  width: 104px;
-}
-#table-municipios {
-  border: 1px solid #dedede;
-  margin-top: 35px;
-  width: 100%;
-}
-#table-municipios td {
-  -webkit-transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
-  -moz-transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
-  -ms-transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
-  -o-transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
-  transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
-  border-top: 1px solid #f8f8f8;
-  height: 100px;
-}
-#table-municipios td:first-child {
-  text-align: left;
-}
-#table-municipios tr {
-  border-left: 5px solid #dedede;
-}
-#table-municipios tr:hover td {
-  background: #f7f7f7;
-}
-#table-municipios th,
-#table-municipios td {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  border-left: 1px solid #dedede;
-  padding: 0 18px;
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
-}
-#table-municipios th {
-  border-bottom: 1px solid #dedede;
-  font-weight: bold;
-  font-size: 12px;
-  height: 35px;
-  min-width: 50px;
-}
-#table-municipios .tit-municipios {
-  text-align: left;
-  width: 350px;
-}
-#table-municipios .grafico {
-  width: 85px;
-}
-#table-municipios .municipio {
-  display: block;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-#table-municipios .escolas {
-  display: block;
-  font-size: 12px;
-}
-#filtro-container {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-#filtro-container::before {
-  font-family: 'FontAwesome';
-  color: #999999;
-  content: "\f002";
-  font-size: 18px;
-  position: absolute;
-  top: 9px;
-  left: 11px;
-}
-#filtro-container input {
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  border: 1px solid #999999;
-  font-size: 12px;
-  padding: 8px 8px 8px 35px;
-  width: 115px;
-  height: 20px;
 }
