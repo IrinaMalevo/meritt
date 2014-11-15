@@ -1263,22 +1263,28 @@ body {
   position: fixed;
   top: 30px;
   left: 0;
+  z-index: 20;
 }
 #versoes #menu li + li {
   margin-top: 7px;
 }
-#versoes #menu li,
 #versoes #menu a {
   color: #ffffff;
   cursor: pointer;
 }
-#versoes #menu li:hover,
 #versoes #menu a:hover {
   text-decoration: underline;
 }
-#versoes #menu li.active,
 #versoes #menu a.active {
   font-weight: bold;
+}
+#versoes #menu li.titulo {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+#versoes #menu li + .titulo {
+  margin-top: 20px;
 }
 #versoes .painel {
   display: none;
@@ -1295,13 +1301,4 @@ body {
   font-weight: bold;
   line-height: 1.5em;
   text-align: center;
-}
-#versoes #v320 {
-  width: 375px;
-}
-#versoes #v768 {
-  width: 788px;
-}
-#versoes #v1024 {
-  width: 1024px;
 }
