@@ -8,7 +8,7 @@
   '{{repeat(50)}}',
   {
     _id: '{{index()}}',
-    nome: '{{random("Abdon Batista", "Abelardo Luz", "Agrolândia", "Agronômica", "Água Doce", "Águas de Chapecó", "Águas Frias", "Águas Mornas", "Alfredo Wagner", "Alto Bela Vista", "Anchieta", "Angelina", "Anita Garibaldi", "Faxinal dos Guedes", "Flor do Sertão", "Florianópolis", "Formosa do Sul", "Forquilhinha", "Fraiburgo", "Frei Rogério", "Ibiam", "Ibicaré", "Ibirama", "Içara", "Ilhota", "Imaruí", "Imbituba", "Imbuia", "Indaial", "Iomerê", "Ipira", "Iporã do Oeste", "Ipuaçu", "Ipumirim", "Iraceminha", "Irani", "Irati", "Irineópolis", "Itá", "Paial", "Painel", "Palhoça", "Palma Sola", "Palmeira", "Palmitos", "Papanduva", "Paraíso", "Passo de Torres", "Passos Maia", "Paulo Lopes", "Pedras Grandes", "Penha", "Peritiba", "Pescaria Brava", "Petrolândia", "Pinhalzinho", "Pinheiro Preto", "Piratuba", "Planalto Alegre", "Pomerode")}}',
+    nome: '{{random("Abdon Batista", "Abelardo Luz", "Agrolândia", "Agronômica", "Água Doce", "Águas Frias", "Águas Mornas", "Alfredo Wagner", "Alto Bela Vista", "Anchieta", "Angelina", "Anita Garibaldi", "Chapecó", "Faxinal dos Guedes", "Flor do Sertão", "Florianópolis", "Formosa do Sul", "Forquilhinha", "Fraiburgo", "Frei Rogério", "Ibiam", "Ibicaré", "Ibirama", "Içara", "Ilhota", "Imaruí", "Imbituba", "Imbuia", "Indaial", "Iomerê", "Ipira", "Iporã do Oeste", "Ipuaçu", "Ipumirim", "Iraceminha", "Irani", "Irati", "Irineópolis", "Itá", "Paial", "Painel", "Palhoça", "Palma Sola", "Palmeira", "Palmitos", "Papanduva", "Paraíso", "Passo de Torres", "Passos Maia", "Paulo Lopes", "Pedras Grandes", "Penha", "Peritiba", "Pescaria Brava", "Petrolândia", "Pinhalzinho", "Pinheiro Preto", "Piratuba", "Planalto Alegre", "Pomerode")}}',
     escolas: '{{integer(2, 30)}}',
     fluxo: '{{floating(0.1, 1, 2)}}',
     aprendizado: '{{floating(2, 10, 2)}}',
@@ -57,7 +57,7 @@
   },
   {
     "_id": 3,
-    "nome": "Águas de Chapecó",
+    "nome": "Chapecó",
     "escolas": 4,
     "fluxo": 0.27,
     "aprendizado": 9.52,
@@ -321,7 +321,7 @@
   },
   {
     "_id": 27,
-    "nome": "Águas de Chapecó",
+    "nome": "Chapecó",
     "escolas": 9,
     "fluxo": 0.17,
     "aprendizado": 8.23,
