@@ -15,36 +15,40 @@
 <body id="versoes">
 	
 	<ul id="menu">
-		<li><a href="index.html">Versão principal</a></li>
-		<li data-resolucao="#v320" onclick="abreResolucao(this)">Tela iPhone 6</li>
-		<li data-resolucao="#v768" onclick="abreResolucao(this)">Tela iPad 4 Retrato</li>
-		<li data-resolucao="#v1024" onclick="abreResolucao(this)">Tela iPad 4 Paisagem</li>
+		<li class="titulo">Desafio #1</li>
+		<li><a href="index.html" data-width="1200" data-height="800" data-titulo="Tela 1180 x 750 pixels (notebook genérico)">Versão principal</a></li>
+		<li><a href="index.html" data-width="375" data-height="667" data-titulo="Tela 375 x 667 pixels (iPhone 6)">Tela iPhone 6</a></li>
+		<li><a href="index.html" data-width="788" data-height="1024" data-titulo="Tela 768 x 1024 pixels (iPad 4 Retrato)">Tela iPad 4 Retrato</a></li>
+		<li><a href="index.html" data-width="1024" data-height="768" data-titulo="Tela 1024 x 768 pixels (iPad 4 Paisagem)">Tela iPad 4 Paisagem</a></li>
+		<li class="titulo">Desafio #2</li>
+		<li><a href="tabela.html" data-width="1200" data-height="800" data-titulo="Tela 1180 x 750 pixels (notebook genérico)">Versão principal</a></li>
+		<li><a href="tabela.html" data-width="375" data-height="667" data-titulo="Tela 375 x 667 pixels (iPhone 6)">Tela iPhone 6</a></li>
+		<li><a href="tabela.html" data-width="788" data-height="1024" data-titulo="Tela 768 x 1024 pixels (iPad 4 Retrato)">Tela iPad 4 Retrato</a></li>
+		<li><a href="tabela.html" data-width="1024" data-height="768" data-titulo="Tela 1024 x 768 pixels (iPad 4 Paisagem)">Tela iPad 4 Paisagem</a></li>
 	</ul>
 
-	<div id="v320" class="painel">
-		<h1>Tela 375 x 667 pixels (iPhone 6)</h1>
-		<iframe src="index.html" sandbox="allow-same-origin allow-forms allow-scripts" width="375" height="667"></iframe>
-	</div>
-	<div id="v768" class="painel">
-		<h1>Tela 768 x 1024 pixels (iPad 4 Retrato)</h1>
-		<iframe src="index.html" sandbox="allow-same-origin allow-forms allow-scripts" width="788" height="1024"></iframe>
-	</div>
-	<div id="v1024" class="painel">
-		<h1>Tela 1024 x 768 pixels (iPad 4 Paisagem)</h1>
-		<iframe src="index.html" sandbox="allow-same-origin allow-forms allow-scripts" width="1024" height="768"></iframe>
+	<div class="painel">
+		<h1></h1>
+		<iframe src="index.html" sandbox="allow-same-origin allow-forms allow-scripts" width="100%"></iframe>
 	</div>
 
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script>
-		function abreResolucao(e){
-			var obj = $(e);
+	$('#menu a').click(function(event){
+		event.preventDefault();
+		var obj = $(event.target);
 
-			$('#menu .active').removeClass();
-			$('.painel').fadeOut();
+		$('#menu .active').removeClass();
+		$('.painel').hide();
 
-			obj.addClass('active');
-			$(obj.data('resolucao')).fadeIn();
-		}
+		$('.painel').width(obj.data('width'));
+		$('iframe').height(obj.data('height'));
+		$('iframe').attr('src', obj.attr('href'));
+		$('h1').text(obj.data('titulo'));
+
+		obj.addClass('active');
+		$('.painel').fadeIn();
+	});
 	</script>
 
 </body>
